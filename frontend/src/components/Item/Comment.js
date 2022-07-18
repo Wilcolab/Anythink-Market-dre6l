@@ -6,7 +6,8 @@ const Comment = (props) => {
   const comment = props.comment;
   const show =
     props.currentUser && props.currentUser.username === comment.seller.username;
-  return (
+  const placeholder = (process.env.PUBLIC_URL + '/placeholder.png');
+    return (
     <div className="col-xs-10 col-md-6">
       <div className="card m-2 shadow-sm" style={{ minHeight: "200px" }}>
         <div className="card-body d-flex flex-column">
@@ -14,7 +15,7 @@ const Comment = (props) => {
           <div className="d-flex flex-row align-items-center pt-2">
             <Link to={`/@${comment.seller.username}`} className="user-pic mr-2">
               <img
-                src={comment.seller.image}
+                src={comment.seller.image ? comment.seller.image : placeholder}
                 className="user-pic rounded-circle"
                 alt={comment.seller.username}
               />

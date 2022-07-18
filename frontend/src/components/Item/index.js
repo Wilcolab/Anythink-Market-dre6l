@@ -8,6 +8,7 @@ import {
   ITEM_PAGE_LOADED,
   ITEM_PAGE_UNLOADED,
 } from "../../constants/actionTypes";
+
 const mapStateToProps = (state) => ({
   ...state.item,
   currentUser: state.common.currentUser,
@@ -34,7 +35,7 @@ class Item extends React.Component {
 
   render() {
     const placeholder = (process.env.PUBLIC_URL + '/placeholder.png');
-  
+    
     if (!this.props.item) {
       return null;
     }

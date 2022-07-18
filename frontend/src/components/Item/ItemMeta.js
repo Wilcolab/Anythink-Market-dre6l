@@ -4,11 +4,12 @@ import React from "react";
 
 const ItemMeta = (props) => {
   const item = props.item;
+  const placeholder = (process.env.PUBLIC_URL + "/placeholder.png");
   return (
     <div className="d-flex flex-row align-items-center pt-2">
       <Link to={`/@${item.seller.username}`}>
         <img
-          src={item.seller.image}
+          src={item.seller.image ? item.seller.image : placeholder}
           alt={item.seller.username}
           className="user-pic mr-2"
         />

@@ -8,7 +8,6 @@ import {
   ITEM_PAGE_LOADED,
   ITEM_PAGE_UNLOADED,
 } from "../../constants/actionTypes";
-
 const mapStateToProps = (state) => ({
   ...state.item,
   currentUser: state.common.currentUser,
@@ -34,10 +33,11 @@ class Item extends React.Component {
   }
 
   render() {
+    const placeholder = (process.env.PUBLIC_URL + '/placeholder.png');
+  
     if (!this.props.item) {
       return null;
     }
-
     const markup = {
       __html: marked(this.props.item.description, { sanitize: true }),
     };
@@ -50,7 +50,7 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                src={this.props.item.image}
+                src={this.props.item.image ? this.props.item.image : placeholder}
                 alt={this.props.item.title}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}

@@ -53,7 +53,6 @@ class Tags(TypedTable):
 
     tag: str
 
-
 class ItemsToTags(TypedTable):
     __table__ = "items_to_tags"
 

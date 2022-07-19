@@ -177,7 +177,6 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
                 ),
             )
             # fmt: on
-
         if favorited:
             query_params.append(favorited)
             query_params_count += 1

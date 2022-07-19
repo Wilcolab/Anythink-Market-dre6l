@@ -164,9 +164,9 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
             query = Query.from_(
                 items,
             ).where(
-                items.title == Parameter(query_params_count),
+                items.id == Parameter(query_params_count),
             ).select(
-                items.id
+                items.title
             )
         if seller:
             query_params.append(seller)

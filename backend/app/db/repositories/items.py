@@ -157,7 +157,17 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
                 ),
             )
             # fmt: on
-
+        if title:
+            query_params.append(title)
+            query_params_count += 1
+            
+            query = Query.from_(
+                items,
+            ).where(
+                items.title == Parameter(query_params_count),
+            ).select(
+                items.id
+            )
         if seller:
             query_params.append(seller)
             query_params_count += 1

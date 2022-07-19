@@ -28,7 +28,7 @@ const ItemPreview = (props) => {
       props.favorite(item.slug);
     }
   };
-
+  const placeholder = (process.env.PUBLIC_URL + "/placeholder.png");
   return (
     <div
       className="card bg-dark border-light p-3"
@@ -36,7 +36,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        src={item.image ? item.image : placeholder}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
@@ -48,7 +48,7 @@ const ItemPreview = (props) => {
         <div className="d-flex flex-row align-items-center pt-2">
           <Link to={`/@${item.seller.username}`} className="flex-grow-1">
             <img
-              src={item.seller.image}
+              src={item.seller.image ? item.seller.image : placeholder}
               alt={item.seller.username}
               className="user-pic rounded-circle pr-1"
             />

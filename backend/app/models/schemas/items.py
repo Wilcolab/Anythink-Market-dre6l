@@ -21,7 +21,7 @@ class ItemInCreate(RWSchema):
     title: str
     description: str
     body: Optional[str] = None
-    image: Optional[str] = None
+    image: Optional[str] = 'https://github.com/ObelusFamily/Anythink-Market-dre6l/blob/e2f6dafe58284737d47a9fe4fade0ae90f78f539/frontend/public/placeholder.png'
     tags: List[str] = Field([], alias="tagList")
 
 

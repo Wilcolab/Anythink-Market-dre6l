@@ -16,7 +16,7 @@ const Comment = (props) => {
             <Link to={`/@${comment.seller.username}`} className="user-pic mr-2">
               <img
                 alt={comment.seller.username}
-                src={placeholder}
+                src={comment.seller.image ? comment.seller.image : placeholder}
                 className="user-pic rounded-circle"
               />
             </Link>

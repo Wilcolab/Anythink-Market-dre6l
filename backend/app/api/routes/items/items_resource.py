@@ -38,6 +38,7 @@ async def list_items(
         tag=items_filters.tag,
         seller=items_filters.seller,
         favorited=items_filters.favorited,
+        title=items_filters.title,
         limit=items_filters.limit,
         offset=items_filters.offset,
         requested_user=user,

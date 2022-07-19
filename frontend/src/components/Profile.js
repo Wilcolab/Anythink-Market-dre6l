@@ -122,7 +122,7 @@ class Profile extends React.Component {
     const isUser =
       this.props.currentUser &&
       this.props.profile.username === this.props.currentUser.username;
-    const placeholder = (process.env.PUBLIC_URL + "/placeholder.png");
+    const placeholder = process.env.PUBLIC_URL + "/placeholder.png";
     return (
       <div className="profile-page">
         <div className="container">

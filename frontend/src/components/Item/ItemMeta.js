@@ -4,7 +4,7 @@ import React from "react";
 
 const ItemMeta = (props) => {
   const item = props.item;
-  const placeholder = (process.env.PUBLIC_URL + "/placeholder.png");
+  const placeholder = process.env.PUBLIC_URL + "/placeholder.png";
   return (
     <div className="d-flex flex-row align-items-center pt-2">
       <Link to={`/@${item.seller.username}`}>

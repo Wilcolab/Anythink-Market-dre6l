@@ -4,10 +4,10 @@ import React from "react";
 
 const Comment = (props) => {
   const comment = props.comment;
-  const placeholder = (process.env.PUBLIC_URL + "/placeholder.png");
+  const placeholder = process.env.PUBLIC_URL + "/placeholder.png";
   const show =
     props.currentUser && props.currentUser.username === comment.seller.username;
-    return (
+  return (
     <div className="col-xs-10 col-md-6">
       <div className="card m-2 shadow-sm" style={{ minHeight: "200px" }}>
         <div className="card-body d-flex flex-column">

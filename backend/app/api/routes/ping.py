@@ -5,7 +5,7 @@ from app.services.event import send_event
 
 router = APIRouter()
 
-@router.get("")
+@router.get("/")
 async def check_ping():
     try:
         res = send_event('ping', {})
